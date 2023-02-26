@@ -1,8 +1,12 @@
 resource "aws_s3_bucket" "sample" {
     bucket = var.bucket_name
-    aws_s3_bucket_versioning=var.versioning
-
-
-    
+        
+}
+resource "aws_s3_bucket_versioning" "versioning_example" {
+  bucket = aws_s3_bucket.sample.id
+  versioning_configuration {
+      
+        status = var.versioning
+  }
 }
   
