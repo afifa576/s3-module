@@ -1,0 +1,1 @@
+module for creating bucket. you need to specify your own bucket name and if  you want you can ebale verisoning
